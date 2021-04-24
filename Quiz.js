@@ -30,20 +30,22 @@ class Quiz {
 
   play(){
     
-    background("lightblue");
-    fill("brown");
+    background("lightgreen");
+    fill("black");
     textSize(32);
     text("Result of the Quiz",340, 50);
-    text("***************************",300, 80);
     Contestant.getPlayerInfo();
-    if(allContestants !== undefined){
+    
+    if(allContestants !== undefined)
+    {
       debugger;
       var display_Answers = 230;
       fill("purple");
       textSize(20);
       text("NOTE: Contestant who answered correct are highlighted in green color",130,230);
 
-      for(var plr in allContestants){
+      for(var plr in allContestants)
+      {
         debugger;
         var correctAns = "3";
         if (correctAns === allContestants[plr].answer)
@@ -52,7 +54,7 @@ class Quiz {
           fill("red");
 
         display_Answers+=30;
-        textSize(20);
+        textSize(25);
         text(allContestants[plr].name + ": " + allContestants[plr].answer, 250,display_Answers)
       }
     }
